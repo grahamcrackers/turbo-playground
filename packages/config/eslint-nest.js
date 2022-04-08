@@ -25,7 +25,7 @@ module.exports = {
             env: {
                 jest: true,
             },
-            files: ['**/__tests__/**/*.[jt]s', '**/?(*.)+(spec|test).[jt]s'],
+            files: ['**/test/**/*.[jt]s', '**/?(*.)+(spec|test).[jt]s'],
             extends: ['plugin:jest/recommended'],
         }
     ],
