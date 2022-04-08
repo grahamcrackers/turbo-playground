@@ -10,6 +10,7 @@
         "start": "turbo run start",
         "build": "turbo run build",
         "dev": "turbo run dev --parallel",
+        "test": "turbo run test",
         "lint": "turbo run lint",
         "format": "prettier --write \"**/*.{ts,tsx,md}\""
     },
@@ -21,8 +22,10 @@
         "@types/jest": "^27.4.1",
         "esbuild": "^0.14.30",
         "esbuild-jest": "^0.5.0",
+        "husky": "^7.0.4",
         "identity-obj-proxy": "^3.0.0",
         "jest": "^27.5.1",
+        "lint-staged": "^12.3.7",
         "prettier": "^2.5.1",
         "turbo": "latest"
     },
@@ -30,5 +33,16 @@
         "npm": ">=7.0.0",
         "node": ">=14.0.0"
     },
-    "packageManager": "yarn@1.22.18"
+    "packageManager": "yarn@1.22.18",
+    "lint-staged": {
+        "apps/**/*.{js,ts,jsx,tsx}": [
+            "eslint --fix"
+        ],
+        "packages/ui/**/*.{js,ts,jsx,tsx}": [
+            "eslint --fix"
+        ],
+        "*.json": [
+            "prettier --write"
+        ]
+    }
 }
