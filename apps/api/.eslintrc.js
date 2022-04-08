@@ -1,5 +1,5 @@
 module.exports = {
-    ...require('config/eslint-next'),
+    ...require('config/eslint-nest'),
     parserOptions: {
         root: true,
         tsconfigRootDir: __dirname,
